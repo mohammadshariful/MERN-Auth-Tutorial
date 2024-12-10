@@ -15,7 +15,7 @@ const Navbar = () => {
         </Link>
         <nav>
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-            <Link to='/'>Home</Link>
+            {user && <Link to='/'>Home</Link>}
             {user?.email ? <button style={{ cursor: 'pointer' }} onClick={() => {
               logout()
             }}><span>{user?.email}</span> Log Out</button> : <><Link to='/login'>Login</Link>
